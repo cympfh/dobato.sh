@@ -1,5 +1,7 @@
 # Dobato.sh - 堂鳩.sh
 
+Notification for your Discord.
+
 Re-implemented https://github.com/himkt/dobato as shellscripts
 
 ## Install
@@ -22,20 +24,23 @@ Run `dobato.sh config`
 
 ```shell
 > dobato.sh config
-Discord webhook url: https://example.com/webhook
-Slack webhook url: https://example.com/webhook
+Discord webhook url: https://discord.com/api/webhooks/123/ABCabc
 ```
-
-If you don't need Discord (or Slack), please press Enter without typing anything.
 
 By default, `config` makes `~/.dobato` as a global config.
 Use flag `--local` to make a local config file.
 
 ## Usage
 
+Notify by text or file.
+The filename must be `*.txt`.
+
 ```shell
 > dobato.sh notify "Hello, World"
+> dobato.sh notify longmessage.txt
 ```
 
-If both (discord and slack) are available, `dobato.sh` will try to use Discord.
-If only one is available, it will be used.
+## References
+
+- [Intro to Webhooks - Discord](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
+
